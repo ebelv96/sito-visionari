@@ -34,6 +34,7 @@
     }
   };
 </script>
+<style>.hidden-lang { display: none !important; }</style>
 
 </head>
 <body class="min-h-screen bg-crema text-fumo font-sans selection:bg-argilla/20">
@@ -42,7 +43,7 @@
     <span class="flex items-center">
       <img src="images/logo.png" alt="Casa dei Visionari" style="height:40px; width:auto; object-fit:contain;">
     </span>
-    <div class="hidden md:flex gap-12 text-[13px] font-bold uppercase tracking-widest">
+    <div class="hidden md:flex gap-8 items-center text-[13px] font-bold uppercase tracking-widest">
       <div class="relative">
         <button type="button" onclick="togglePhotoMenu(event)" class="hover:text-argilla transition-colors uppercase tracking-widest font-bold text-[13px]">PHOTOGALLERY</button>
         <div id="photogallery-menu" class="hidden absolute left-0 mt-4 bg-crema py-2 min-w-[190px] shadow-lg" style="text-shadow:none;">
@@ -50,10 +51,14 @@
           <a href="gallery-mare.html" target="_blank" rel="noopener" class="block px-5 py-3 text-[11px] uppercase tracking-widest text-fumo hover:bg-argilla/10 transition-colors">Mare</a>
         </div>
       </div>
-      <a href="#filosofia" class="hover:text-argilla transition-colors"></a>
-      <a href="#contatti" class="hover:text-argilla transition-colors">Contatti</a>
+      <a href="#contatti" class="hover:text-argilla transition-colors"><span class="lang-it">Contatti</span><span class="lang-en hidden-lang">Contact</span></a>
+      <div class="flex items-center gap-1 text-[11px]">
+        <button type="button" onclick="setLang('it')" id="lang-btn-it" class="hover:text-argilla transition-colors">IT</button>
+        <span>|</span>
+        <button type="button" onclick="setLang('en')" id="lang-btn-en" class="hover:text-argilla transition-colors">EN</button>
+      </div>
     </div>
-    <a href="#prenota" class="border border-sale/50 px-4 py-2 text-[12px] md:text-[13px] font-bold uppercase tracking-widest hover:bg-sale hover:text-fumo transition-all">Prenota</a>
+    <a href="#prenota" class="border border-sale/50 px-4 py-2 text-[12px] md:text-[13px] font-bold uppercase tracking-widest hover:bg-sale hover:text-fumo transition-all"><span class="lang-it">Prenota</span><span class="lang-en hidden-lang">Book</span></a>
     <button type="button" onclick="toggleMobileMenu(event)" class="md:hidden ml-4 text-sale text-2xl leading-none" aria-label="Menu">&#9776;</button>
   </nav>
 
@@ -64,8 +69,13 @@
         <a href="gallery-madonnella.html" target="_blank" rel="noopener" class="block py-2 pl-3 text-[13px] uppercase tracking-widest">Madonnella</a>
         <a href="gallery-mare.html" target="_blank" rel="noopener" class="block py-2 pl-3 text-[13px] uppercase tracking-widest">Mare</a>
       </div>
-      <a href="#contatti" onclick="closeMobileMenu()" class="py-3 border-b border-fumo/10 text-[13px] uppercase tracking-widest font-bold">Contatti</a>
-      <a href="#prenota" onclick="closeMobileMenu()" class="py-3 text-[13px] uppercase tracking-widest font-bold">Prenota</a>
+      <a href="#contatti" onclick="closeMobileMenu()" class="py-3 border-b border-fumo/10 text-[13px] uppercase tracking-widest font-bold"><span class="lang-it">Contatti</span><span class="lang-en hidden-lang">Contact</span></a>
+      <a href="#prenota" onclick="closeMobileMenu()" class="py-3 border-b border-fumo/10 text-[13px] uppercase tracking-widest font-bold"><span class="lang-it">Prenota</span><span class="lang-en hidden-lang">Book</span></a>
+      <div class="py-3 flex items-center gap-3 text-[13px] uppercase tracking-widest font-bold">
+        <button type="button" onclick="setLang('it')" id="lang-btn-it-mobile">IT</button>
+        <span>|</span>
+        <button type="button" onclick="setLang('en')" id="lang-btn-en-mobile">EN</button>
+      </div>
     </div>
   </div>
 
@@ -94,11 +104,14 @@
 
     <div class="relative z-10 text-center" style="text-shadow:0 2px 16px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.55);">
       <h1 class="text-6xl md:text-8xl font-display font-light italic mb-6 text-sale">Casa dei Visionari</h1>
-      <p class="max-w-md mx-auto text-base tracking-wider leading-relaxed text-sale/90">Come to experience your Vuja-De, the feeling of seeing a familiar place for the first time.</p>
+      <p class="max-w-md mx-auto text-base tracking-wider leading-relaxed text-sale/90">
+        <span class="lang-it">Vieni a vivere il tuo Vuja-De: la sensazione di vedere un luogo familiare per la prima volta.</span>
+        <span class="lang-en hidden-lang">Come to experience your Vuja-De, the feeling of seeing a familiar place for the first time.</span>
+      </p>
     </div>
 
     <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4" style="text-shadow:0 1px 8px rgba(0,0,0,0.5);">
-      <span class="text-[10px] uppercase tracking-[0.3em] text-sale/70">Scopri</span>
+      <span class="text-[10px] uppercase tracking-[0.3em] text-sale/70"><span class="lang-it">Scopri</span><span class="lang-en hidden-lang">Discover</span></span>
       <div class="w-px h-12 bg-sale/40"></div>
     </div>
   </section>
@@ -114,11 +127,14 @@
           <div class="flex justify-between items-end border-b border-fumo/10 pb-4">
             <div>
               <h2 class="text-3xl font-display">Casa dei Visionari - Madonnella</h2>
-              <p class="text-[10px] uppercase tracking-widest text-argilla mt-1">MADONNELLA, BARI &middot; 4 OSPITI</p>
+              <p class="text-[10px] uppercase tracking-widest text-argilla mt-1"><span class="lang-it">MADONNELLA, BARI &middot; 4 OSPITI</span><span class="lang-en hidden-lang">MADONNELLA, BARI &middot; 4 GUESTS</span></p>
             </div>
     
           </div>
-          <p class="text-sm leading-relaxed text-fumo/70">Un rifugio di luce e design, a pochi passi dal mare e dal cuore di Bari. Interni essenziali dove il fascino dell'architettura urbana incontra dettagli contemporanei.</p>
+          <p class="text-sm leading-relaxed text-fumo/70">
+            <span class="lang-it">Un rifugio di luce e design, a pochi passi dal mare e dal cuore di Bari. Interni essenziali dove il fascino dell'architettura urbana incontra dettagli contemporanei.</span>
+            <span class="lang-en hidden-lang">A refuge of light and design, steps from the sea and the heart of Bari. Essential interiors where the charm of urban architecture meets contemporary details.</span>
+          </p>
         </div>
       </article>
 
@@ -130,11 +146,14 @@
           <div class="flex justify-between items-end border-b border-fumo/10 pb-4">
             <div>
               <h2 class="text-3xl font-display">Casa dei Visionari - Mare</h2>
-              <p class="text-[10px] uppercase tracking-widest text-mare mt-1">PANE E POMODORO, BARI &middot; 4 OSPITI</p>
+              <p class="text-[10px] uppercase tracking-widest text-mare mt-1"><span class="lang-it">PANE E POMODORO, BARI &middot; 4 OSPITI</span><span class="lang-en hidden-lang">PANE E POMODORO, BARI &middot; 4 GUESTS</span></p>
             </div>
           
           </div>
-          <p class="text-sm leading-relaxed text-fumo/70">Un appartamento sospeso tra il blu del mare e l'energia della città. Spazi luminosi, design contemporaneo e una posizione privilegiata per vivere Bari da una prospettiva unica.</p>
+          <p class="text-sm leading-relaxed text-fumo/70">
+            <span class="lang-it">Un appartamento sospeso tra il blu del mare e l'energia della citt&agrave;. Spazi luminosi, design contemporaneo e una posizione privilegiata per vivere Bari da una prospettiva unica.</span>
+            <span class="lang-en hidden-lang">An apartment suspended between the blue of the sea and the energy of the city. Bright spaces, contemporary design, and a privileged location to experience Bari from a unique perspective.</span>
+          </p>
         </div>
       </article>
 
@@ -143,10 +162,10 @@
 
   <section id="prenota" class="py-32 px-6 md:px-10 bg-mare/5">
     <div class="max-w-sm mx-auto text-center mb-10">
-      <span class="text-[10px] uppercase tracking-[0.4em] text-argilla">Verifica la disponibilit&agrave;</span>
-      <h2 class="mt-4 text-3xl md:text-4xl font-display italic text-fumo">Prenota il tuo soggiorno</h2>
+      <span class="text-[10px] uppercase tracking-[0.4em] text-argilla"><span class="lang-it">Verifica la disponibilit&agrave;</span><span class="lang-en hidden-lang">Check availability</span></span>
+      <h2 class="mt-4 text-3xl md:text-4xl font-display italic text-fumo"><span class="lang-it">Prenota il tuo soggiorno</span><span class="lang-en hidden-lang">Book your stay</span></h2>
       <div class="mt-8 text-left">
-        <label class="block text-[10px] uppercase tracking-[0.3em] text-argilla mb-3">Scegli la dimora</label>
+        <label class="block text-[10px] uppercase tracking-[0.3em] text-argilla mb-3"><span class="lang-it">Scegli la dimora</span><span class="lang-en hidden-lang">Choose your home</span></label>
         <select id="prenota-select" class="w-full border border-fumo/25 bg-transparent px-4 py-3 text-xs uppercase tracking-widest font-sans text-fumo" onchange="prenotaSwitch(this.value)">
           <option value="madonnella">Casa dei Visionari - Madonnella</option>
           <option value="mare">Casa dei Visionari - Mare</option>
@@ -163,27 +182,30 @@
       <div id="prenota-dow-row" class="grid grid-cols-7 gap-1 mb-1"></div>
       <div id="prenota-cal-grid" class="grid grid-cols-7 gap-1"></div>
       <div class="flex justify-center gap-6 mt-6 text-[10px] uppercase tracking-widest text-fumo/60">
-        <span class="inline-flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#7c9a6e;"></span>Libero</span>
-        <span class="inline-flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:rgba(62,59,57,0.12);"></span>Non disponibile</span>
+        <span class="inline-flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:#7c9a6e;"></span><span class="lang-it">Libero</span><span class="lang-en hidden-lang">Available</span></span>
+        <span class="inline-flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-sm" style="background:rgba(62,59,57,0.12);"></span><span class="lang-it">Non disponibile</span><span class="lang-en hidden-lang">Not available</span></span>
       </div>
     </div>
   </section>
 
   <div id="prenota-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center px-6" style="background:rgba(20,18,16,0.6);" onclick="prenotaCloseModal(event)">
     <div class="bg-crema max-w-xs w-full p-8 text-center" onclick="event.stopPropagation()">
-      <p class="text-sm text-fumo/70 mb-2">Richiedi disponibilit&agrave; per</p>
+      <p class="text-sm text-fumo/70 mb-2"><span class="lang-it">Richiedi disponibilit&agrave; per</span><span class="lang-en hidden-lang">Request availability for</span></p>
       <p id="prenota-modal-unit" class="text-xs uppercase tracking-widest text-argilla mb-1"></p>
       <p id="prenota-modal-date" class="text-2xl font-display italic mb-6 text-fumo"></p>
-      <a id="prenota-modal-whatsapp" href="#" target="_blank" rel="noopener" class="block mb-3 border border-fumo px-5 py-3 text-[11px] uppercase tracking-widest text-fumo hover:bg-fumo hover:text-sale transition-colors">Scrivi su WhatsApp</a>
-      <a id="prenota-modal-email" href="#" class="block border border-fumo px-5 py-3 text-[11px] uppercase tracking-widest text-fumo hover:bg-fumo hover:text-sale transition-colors">Invia una mail</a>
-      <button type="button" onclick="prenotaCloseModal()" class="mt-6 text-[10px] uppercase tracking-widest text-fumo/50">Chiudi</button>
+      <a id="prenota-modal-whatsapp" href="#" target="_blank" rel="noopener" class="block mb-3 border border-fumo px-5 py-3 text-[11px] uppercase tracking-widest text-fumo hover:bg-fumo hover:text-sale transition-colors"><span class="lang-it">Scrivi su WhatsApp</span><span class="lang-en hidden-lang">Message on WhatsApp</span></a>
+      <a id="prenota-modal-email" href="#" class="block border border-fumo px-5 py-3 text-[11px] uppercase tracking-widest text-fumo hover:bg-fumo hover:text-sale transition-colors"><span class="lang-it">Invia una mail</span><span class="lang-en hidden-lang">Send an email</span></a>
+      <button type="button" onclick="prenotaCloseModal()" class="mt-6 text-[10px] uppercase tracking-widest text-fumo/50"><span class="lang-it">Chiudi</span><span class="lang-en hidden-lang">Close</span></button>
     </div>
   </div>
 
   <section id="filosofia" class="bg-mare/10 pt-32 pb-20 mt-20">
     <div class="max-w-4xl mx-auto px-6 md:px-10 text-center">
       <h2 class="text-[10px] uppercase tracking-[0.4em] mb-12 text-mare">CASA DEI VISIONARI</h2>
-      <p class="text-3xl md:text-5xl font-display leading-tight italic text-fumo">&ldquo;Crediamo nel lusso del tempo, nel suono del vento tra le persiane e nell'odore del mare fuori&rdquo;</p>
+      <p class="text-3xl md:text-5xl font-display leading-tight italic text-fumo">
+        <span class="lang-it">&ldquo;Crediamo nel lusso del tempo, nel suono del vento tra le persiane e nell'odore del mare fuori&rdquo;</span>
+        <span class="lang-en hidden-lang">&ldquo;We believe in the luxury of time, the sound of wind through the shutters, and the scent of the sea outside&rdquo;</span>
+      </p>
     </div>
   </section>
   <section class="relative w-full h-[70vh] md:h-[85vh] overflow-hidden crossfade-slider" id="filosofia-slider" style="background:#1c1a18;">
@@ -198,9 +220,12 @@
 
   <section id="contatti" class="py-32 px-6 md:px-10">
     <div class="max-w-3xl mx-auto text-center">
-      <span class="text-[10px] uppercase tracking-[0.4em] text-argilla">Richiedi disponibilit&agrave;</span>
-      <h2 class="mt-6 text-4xl md:text-5xl font-display italic text-fumo">Inizia il tuo soggiorno.</h2>
-      <p class="mt-6 text-sm text-fumo/70 max-w-md mx-auto leading-relaxed">Raccontaci le date e i tuoi desideri. Ti risponderemo con una proposta cucita sul tuo tempo.</p>
+      <span class="text-[10px] uppercase tracking-[0.4em] text-argilla"><span class="lang-it">Richiedi disponibilit&agrave;</span><span class="lang-en hidden-lang">Request availability</span></span>
+      <h2 class="mt-6 text-4xl md:text-5xl font-display italic text-fumo"><span class="lang-it">Inizia il tuo soggiorno.</span><span class="lang-en hidden-lang">Begin your stay.</span></h2>
+      <p class="mt-6 text-sm text-fumo/70 max-w-md mx-auto leading-relaxed">
+        <span class="lang-it">Raccontaci le date e i tuoi desideri. Ti risponderemo con una proposta cucita sul tuo tempo.</span>
+        <span class="lang-en hidden-lang">Tell us your dates and what you're looking for. We'll get back to you with an offer tailored to your time.</span>
+      </p>
       <a href="mailto:casadeivisionari@gmail.com" class="mt-10 inline-block text-2xl md:text-3xl font-display italic border-b border-fumo/30 pb-1 hover:border-fumo transition-colors">casadeivisionari@gmail.com</a>
     </div>
     <a href="https://wa.me/393407687874" target="_blank" rel="noopener"
@@ -213,11 +238,11 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
       <div class="space-y-4">
         <span class="text-2xl tracking-widest font-display">CASA DEI VISIONARI</span>
-        <p class="text-[10px] uppercase tracking-widest text-fumo/50">AFFITTI BREVI IN PUGLIA &middot; FONDATO NEL 2022</p>
+        <p class="text-[10px] uppercase tracking-widest text-fumo/50"><span class="lang-it">AFFITTI BREVI IN PUGLIA &middot; FONDATO NEL 2022</span><span class="lang-en hidden-lang">SHORT-TERM RENTALS IN PUGLIA &middot; FOUNDED IN 2022</span></p>
       </div>
       <div class="grid grid-cols-2 gap-16">
         <div class="space-y-4">
-          <h3 class="text-[10px] uppercase tracking-[0.2em] font-bold">Seguici</h3>
+          <h3 class="text-[10px] uppercase tracking-[0.2em] font-bold"><span class="lang-it">Seguici</span><span class="lang-en hidden-lang">Follow us</span></h3>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="text-fumo/70">
             <rect x="3" y="3" width="18" height="18" rx="5"></rect>
             <circle cx="12" cy="12" r="4"></circle>
@@ -229,9 +254,9 @@
           </ul>
         </div>
         <div class="space-y-4">
-          <h3 class="text-[10px] uppercase tracking-[0.2em] font-bold">Dove</h3>
+          <h3 class="text-[10px] uppercase tracking-[0.2em] font-bold"><span class="lang-it">Dove</span><span class="lang-en hidden-lang">Where</span></h3>
           <ul class="text-[10px] uppercase tracking-widest space-y-2 text-fumo/60">
-            <li>Bari - Puglia, Italia</li>
+            <li><span class="lang-it">Bari - Puglia, Italia</span><span class="lang-en hidden-lang">Bari - Puglia, Italy</span></li>
             <li></li>
           </ul>
         </div>
@@ -293,6 +318,36 @@ function toggleHeroSound() {
     iconOn.classList.remove('hidden');
   }
 }
+
+var currentLang = 'it';
+
+function setLang(lang) {
+  currentLang = lang;
+  var itEls = document.getElementsByClassName('lang-it');
+  var enEls = document.getElementsByClassName('lang-en');
+  var i;
+  for (i = 0; i < itEls.length; i++) {
+    if (lang === 'it') { itEls[i].classList.remove('hidden-lang'); } else { itEls[i].classList.add('hidden-lang'); }
+  }
+  for (i = 0; i < enEls.length; i++) {
+    if (lang === 'en') { enEls[i].classList.remove('hidden-lang'); } else { enEls[i].classList.add('hidden-lang'); }
+  }
+  var btnItD = document.getElementById('lang-btn-it');
+  var btnEnD = document.getElementById('lang-btn-en');
+  var btnItM = document.getElementById('lang-btn-it-mobile');
+  var btnEnM = document.getElementById('lang-btn-en-mobile');
+  [btnItD, btnItM].forEach(function (b) { if (b) { b.style.opacity = (lang === 'it') ? '1' : '0.5'; b.style.textDecoration = (lang === 'it') ? 'underline' : 'none'; } });
+  [btnEnD, btnEnM].forEach(function (b) { if (b) { b.style.opacity = (lang === 'en') ? '1' : '0.5'; b.style.textDecoration = (lang === 'en') ? 'underline' : 'none'; } });
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('cdv_lang', lang); } catch (e) {}
+  if (typeof prenotaRenderCalendar === 'function') { prenotaRenderCalendar(); }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var saved = 'it';
+  try { saved = localStorage.getItem('cdv_lang') || 'it'; } catch (e) {}
+  setLang(saved);
+});
 </script>
 
 <script>
@@ -309,7 +364,9 @@ var PRENOTA_UNIT_NAMES = {
 };
 
 var PRENOTA_MONTH_NAMES = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+var PRENOTA_MONTH_NAMES_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 var PRENOTA_DOW = ['L','M','M','G','V','S','D'];
+var PRENOTA_DOW_EN = ['M','T','W','T','F','S','S'];
 
 var prenotaState = { unit: 'madonnella', year: (new Date()).getFullYear(), month: (new Date()).getMonth() };
 var prenotaBookings = { madonnella: [], mare: [] };
@@ -441,13 +498,13 @@ function prenotaRenderCalendar() {
   var dowRow = document.getElementById('prenota-dow-row');
   var grid = document.getElementById('prenota-cal-grid');
   if (!grid) { return; }
-  monthLabel.textContent = PRENOTA_MONTH_NAMES[prenotaState.month] + ' ' + prenotaState.year;
+  monthLabel.textContent = (currentLang === 'en' ? PRENOTA_MONTH_NAMES_EN : PRENOTA_MONTH_NAMES)[prenotaState.month] + ' ' + prenotaState.year;
   dowRow.innerHTML = '';
   var d;
   for (d = 0; d < 7; d++) {
     var dowCell = document.createElement('div');
     dowCell.className = 'text-center text-[9px] uppercase tracking-widest text-fumo/40';
-    dowCell.textContent = PRENOTA_DOW[d];
+    dowCell.textContent = (currentLang === 'en' ? PRENOTA_DOW_EN : PRENOTA_DOW)[d];
     dowRow.appendChild(dowCell);
   }
   grid.innerHTML = '';
@@ -505,9 +562,8 @@ function prenotaCalShift(delta) {
 }
 
 function prenotaFormatDate(d) {
-  var days = ['Domenica','Luned&#236;','Marted&#236;','Mercoled&#236;','Gioved&#236;','Venerd&#236;','Sabato'];
   var dd = d.getDate();
-  var mm = PRENOTA_MONTH_NAMES[d.getMonth()];
+  var mm = (currentLang === 'en' ? PRENOTA_MONTH_NAMES_EN : PRENOTA_MONTH_NAMES)[d.getMonth()];
   return dd + ' ' + mm + ' ' + d.getFullYear();
 }
 
@@ -516,9 +572,14 @@ function prenotaOpenModal(date) {
   var dateLabel = prenotaFormatDate(date);
   document.getElementById('prenota-modal-unit').textContent = unitLabel;
   document.getElementById('prenota-modal-date').textContent = dateLabel;
-  var msg = 'Ciao! Vorrei chiedere la disponibilita per ' + unitLabel + ' a partire dal ' + dateLabel + '.';
+  var msg = currentLang === 'en'
+    ? 'Hi! I would like to ask about availability for ' + unitLabel + ' starting from ' + dateLabel + '.'
+    : 'Ciao! Vorrei chiedere la disponibilita per ' + unitLabel + ' a partire dal ' + dateLabel + '.';
+  var subject = currentLang === 'en'
+    ? 'Availability request - ' + unitLabel
+    : 'Richiesta disponibilita - ' + unitLabel;
   document.getElementById('prenota-modal-whatsapp').href = 'https://wa.me/' + PRENOTA_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
-  document.getElementById('prenota-modal-email').href = 'mailto:' + PRENOTA_EMAIL + '?subject=' + encodeURIComponent('Richiesta disponibilita - ' + unitLabel) + '&body=' + encodeURIComponent(msg);
+  document.getElementById('prenota-modal-email').href = 'mailto:' + PRENOTA_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(msg);
   document.getElementById('prenota-modal').classList.remove('hidden');
 }
 
