@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa dei Visionari &middot; Madonnella &middot; Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Questrial&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { crema: '#f9f7f2', argilla: '#c5a18b', mare: '#8ba9b3', fumo: '#3e3b39', sale: '#ffffff' },
+        fontFamily: {
+          display: ['Cormorant Garamond', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['Questrial', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  };
+</script>
+<style> body { margin:0; background:#1c1a18; } </style>
+</head>
+<body class="font-sans">
+
+  <a href="index.html" class="fixed top-6 left-6 z-50 text-sale text-[11px] uppercase tracking-widest px-4 py-2 border border-sale/40 hover:bg-sale hover:text-fumo transition-colors" style="text-shadow:0 1px 6px rgba(0,0,0,0.4);">&larr; Torna al sito</a>
+
+  <div class="absolute top-8 left-0 w-full text-center z-10" style="text-shadow:0 1px 8px rgba(0,0,0,0.6);">
+    <span class="text-[10px] uppercase tracking-[0.3em] text-sale/80">Casa dei Visionari &middot; Madonnella</span>
+  </div>
+
+  <div class="relative w-full h-screen overflow-hidden crossfade-slider" id="gallery-slider">
+    <img src="images/madonnella/madonnella-04.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:1;">
+    <img src="images/madonnella/madonnella-18.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-17.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-16.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-10.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-15.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-14.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-13.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-12.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-01.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-02.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-03.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-05.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-06.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-07.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-08.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-09.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-19.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-20.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-21.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-22.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-23.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-24.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+    <img src="images/madonnella/madonnella-25.jpg" class="slider-slide absolute inset-0 w-full h-full object-cover" style="opacity:0;">
+  </div>
+
+  <button type="button" id="slider-prev" class="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full flex items-center justify-center text-sale text-xl" style="background:rgba(255,255,255,0.14); backdrop-filter:blur(4px);" onclick="sliderNav(-1)">&#8249;</button>
+  <button type="button" id="slider-next" class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full flex items-center justify-center text-sale text-xl" style="background:rgba(255,255,255,0.14); backdrop-filter:blur(4px);" onclick="sliderNav(1)">&#8250;</button>
+  <div id="slider-counter" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 text-sale text-[11px] tracking-widest" style="text-shadow:0 1px 6px rgba(0,0,0,0.5);"></div>
+
+<script>
+(function () {
+  var container = document.getElementById('gallery-slider');
+  if (!container) { return; }
+  var slides = container.getElementsByClassName('slider-slide');
+  var current = 0;
+  var timer = null;
+  var counter = document.getElementById('slider-counter');
+  var prevBtn = document.getElementById('slider-prev');
+  var nextBtn = document.getElementById('slider-next');
+
+  if (slides.length < 2) {
+    if (counter) { counter.style.display = 'none'; }
+    if (prevBtn) { prevBtn.style.display = 'none'; }
+    if (nextBtn) { nextBtn.style.display = 'none'; }
+    return;
+  }
+
+  function updateCounter() {
+    if (counter) { counter.textContent = (current + 1) + ' / ' + slides.length; }
+  }
+  function goTo(index) {
+    var next = ((index % slides.length) + slides.length) % slides.length;
+    slides[current].style.opacity = '0';
+    slides[next].style.opacity = '1';
+    current = next;
+    updateCounter();
+  }
+  function startAuto() {
+    if (timer) { clearInterval(timer); }
+    timer = setInterval(function () { goTo(current + 1); }, 4500);
+  }
+
+  window.sliderNav = function (delta) {
+    goTo(current + delta);
+    startAuto();
+  };
+
+  for (var i = 0; i < slides.length; i++) { slides[i].style.transition = 'opacity 1.2s ease'; }
+  updateCounter();
+  startAuto();
+
+  var touchStartX = null;
+  container.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; });
+  container.addEventListener('touchend', function (e) {
+    if (touchStartX === null) { return; }
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { sliderNav(dx < 0 ? 1 : -1); }
+    touchStartX = null;
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { sliderNav(1); }
+    if (e.key === 'ArrowLeft') { sliderNav(-1); }
+  });
+})();
+</script>
+
+</body>
+</html>
