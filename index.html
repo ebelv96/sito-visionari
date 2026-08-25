@@ -576,10 +576,10 @@ function prenotaOpenModal(date) {
   document.getElementById('prenota-modal-date').textContent = dateLabel;
   var msg = currentLang === 'en'
     ? 'Hi! I would like to ask about availability for ' + unitLabel + ' starting from ' + dateLabel + '.'
-    : 'Ciao! Vorrei chiedere la disponibilita per ' + unitLabel + ' a partire dal ' + dateLabel + '.';
+    : 'Ciao! Vorrei chiedere la disponibilità per ' + unitLabel + ' a partire dal ' + dateLabel + '.';
   var subject = currentLang === 'en'
     ? 'Availability request - ' + unitLabel
-    : 'Richiesta disponibilita - ' + unitLabel;
+    : 'Richiesta disponibilità - ' + unitLabel;
   document.getElementById('prenota-modal-whatsapp').href = 'https://wa.me/' + PRENOTA_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
   document.getElementById('prenota-modal-email').href = 'mailto:' + PRENOTA_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(msg);
   document.getElementById('prenota-modal').classList.remove('hidden');
